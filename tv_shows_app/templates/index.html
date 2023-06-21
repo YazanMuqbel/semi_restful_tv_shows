@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TV Shows App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <h1 class="display-4">Add a new Show</h1>
+    <div class="container">
+        <form action="{% url 'create' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" />
+            </div>
+            <div class="form-group">
+                <label for="network">Network</label>
+                <input type="text" class="form-control" id="network" name="network" />
+            </div>
+            <div class="form-group">
+                <label for="release_date">Release Date</label>
+                <input type="date" class="form-control" id="release_date" name="release_date" />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create TV Show</button>
+        </form>
+    </div>
+<!-- ********************************************************************************************************-->
+    
+
+</body>
+
+</html>

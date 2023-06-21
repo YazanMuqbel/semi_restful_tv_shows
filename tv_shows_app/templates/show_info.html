@@ -1,0 +1,17 @@
+<h1>TV Show {{show.id}}</h1>
+<p>Title: {{ show.title }}</p>
+<p>Network: {{ show.network }}</p>
+  <p>Release Date: {{ show.release_date }}</p>
+  <p>Description: {{ show.description }}</p>
+  <p>Created At: {{ show.created_at }}</p>
+  <p>Updated At: {{ show.updated_at }}</p>
+
+  <a href="{% url 'list_of_all_shows'%}" class="btn btn-primary">Go Back</a>
+
+  <a href="{% url 'delete' id=show.id%}" class="btn btn-primary">DELETE</a>
+
+  <a href="{% url 'show_info' id=show.id%}" class="btn btn-primary">Update</a>
+
+
+
+
